@@ -1,0 +1,1694 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7f5">
+  <meta name="description" content="Bouquet by Nella — buket bunga aesthetic untuk setiap cerita.">
+  <title>Bouquet by Nella — Flowers for Your Feelings</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #f5dce2;
+      --pink-dark: #a65e78;
+      --pink-deep: #803d58;
+      --cream: #fffaf7;
+      --text: #543b43;
+      --muted: #9b7d84;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .announcement {
+      background: var(--pink-deep);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 250, 247, 0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid #f0e3e4;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 17px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      color: var(--pink-deep);
+      white-space: nowrap;
+    }
+
+    .logo span {
+      display: block;
+      font-family: "DM Sans", sans-serif;
+      text-align: center;
+      font-size: 9px;
+      letter-spacing: 3px;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      transition: color .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--pink-dark);
+    }
+
+    .nav-cta {
+      padding: 11px 19px;
+      background: var(--pink-dark);
+      color: white;
+      border-radius: 50px;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 65px 6% 85px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      color: var(--pink-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(46px, 6vw, 78px);
+      font-weight: 500;
+      line-height: 1.08;
+      margin: 23px 0;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 em {
+      color: var(--pink-dark);
+      font-weight: 500;
+    }
+
+    .hero p {
+      max-width: 400px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 23px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid var(--pink-dark);
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--pink-dark);
+      color: white;
+    }
+
+    .btn-outline {
+      color: var(--pink-dark);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px #d7a8b544;
+    }
+
+    .hero-note {
+      margin-top: 35px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .hero-visual {
+      position: relative;
+      padding: 0 10px 20px 0;
+    }
+
+    .hero-photo {
+      height: 510px;
+      border-radius: 48% 48% 8px 8px;
+      object-position: center;
+    }
+
+    .floating-card {
+      position: absolute;
+      bottom: 0;
+      left: -35px;
+      max-width: 210px;
+      background: white;
+      padding: 17px 21px;
+      border-radius: 14px;
+      box-shadow: 0 12px 35px #7c4b5b1a;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .floating-card strong {
+      display: block;
+      color: var(--pink-deep);
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .sparkle {
+      position: absolute;
+      top: 25px;
+      right: -12px;
+      font-size: 42px;
+      color: var(--pink-dark);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-10px) rotate(10deg); }
+    }
+
+    .ticker {
+      overflow: hidden;
+      padding: 18px 0;
+      background: var(--pink);
+      color: var(--pink-deep);
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      animation: marquee 24s linear infinite;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-head h2 {
+      margin: 13px 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(33px, 4vw, 48px);
+      font-weight: 500;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .filter-btn {
+      padding: 10px 19px;
+      border: 1px solid #ead5da;
+      background: transparent;
+      color: var(--text);
+      border-radius: 50px;
+      font-size: 12px;
+      transition: .25s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--pink-dark);
+      border-color: var(--pink-dark);
+      color: white;
+    }
+
+    .product-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .product {
+      min-width: 0;
+      transition: transform .3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      position: relative;
+      overflow: hidden;
+      background: var(--pink);
+      border-radius: 12px;
+    }
+
+    .product-image img {
+      height: 340px;
+      transition: transform .6s;
+    }
+
+    .product:hover .product-image img {
+      transform: scale(1.06);
+    }
+
+    .tag {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      padding: 7px 11px;
+      background: #fffaf0eF;
+      color: var(--pink-deep);
+      font-size: 10px;
+      border-radius: 50px;
+    }
+
+    .product-info {
+      padding: 17px 3px;
+    }
+
+    .product-info h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+      font-weight: 500;
+    }
+
+    .product-info p {
+      margin: 7px 0 13px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .product-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--pink-deep);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .order-btn {
+      padding: 10px 13px;
+      border: 0;
+      border-radius: 50px;
+      background: var(--pink);
+      color: var(--pink-deep);
+      font-size: 11px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .order-btn:hover {
+      background: var(--pink-dark);
+      color: white;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .about {
+      background: #f8e9e9;
+    }
+
+    .about-inner {
+      max-width: 1050px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .about-image {
+      height: 440px;
+      border-radius: 200px 200px 12px 12px;
+    }
+
+    .about-copy h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 4vw, 49px);
+      line-height: 1.2;
+      font-weight: 500;
+      margin: 17px 0;
+    }
+
+    .about-copy h2 em {
+      color: var(--pink-dark);
+    }
+
+    .about-copy p {
+      color: #896f76;
+      font-size: 13px;
+      line-height: 2;
+      margin-bottom: 18px;
+    }
+
+    .perks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .perk {
+      border-top: 1px solid #dcbfc6;
+      padding-top: 15px;
+    }
+
+    .perk strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+
+    .perk span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .steps {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .step {
+      padding: 30px 23px;
+      border: 1px solid #efdee1;
+      border-radius: 14px;
+      text-align: center;
+      background: #fffdfb;
+    }
+
+    .step-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      background: var(--pink);
+      border-radius: 50%;
+      font-size: 23px;
+    }
+
+    .step h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .cta {
+      max-width: 1080px;
+      margin: 0 auto 90px;
+      padding: 70px 25px;
+      text-align: center;
+      background: var(--pink-deep);
+      color: white;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before,
+    .cta::after {
+      content: "✿";
+      position: absolute;
+      font-size: 110px;
+      color: #ffffff15;
+    }
+
+    .cta::before {
+      top: -20px;
+      left: 15px;
+    }
+
+    .cta::after {
+      bottom: -35px;
+      right: 15px;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(35px, 5vw, 53px);
+      font-weight: 500;
+      margin: 15px 0;
+    }
+
+    .cta p {
+      max-width: 430px;
+      margin: 0 auto 25px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #f2dce4;
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--pink-deep);
+      border-color: white;
+    }
+
+    footer {
+      background: #f7e8e8;
+      padding: 50px 6% 22px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand p {
+      margin-top: 15px;
+      max-width: 280px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .footer-links h4 {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 11px 0;
+    }
+
+    .footer-links a:hover {
+      color: var(--pink-deep);
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #e7d2d7;
+      color: var(--muted);
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 90;
+      background: #287c56;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      box-shadow: 0 6px 22px #0002;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s, transform .7s;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 11px;
+      }
+
+      .nav-links .nav-cta {
+        padding: 10px 12px;
+      }
+
+      .hero {
+        padding: 50px 6%;
+        gap: 35px;
+      }
+
+      .hero-photo {
+        height: 390px;
+      }
+
+      .floating-card {
+        left: -15px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .product-image img {
+        height: 290px;
+      }
+
+      .about-inner {
+        gap: 35px;
+      }
+
+      .about-image {
+        height: 350px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .announcement {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .nav-links {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: 53px;
+      }
+
+      .hero-visual {
+        margin-left: 15px;
+        margin-right: 12px;
+      }
+
+      .hero-photo {
+        height: 420px;
+      }
+
+      .floating-card {
+        left: -15px;
+      }
+
+      section {
+        padding: 65px 5%;
+      }
+
+      .product-grid {
+        gap: 18px 12px;
+      }
+
+      .product-image img {
+        height: 225px;
+      }
+
+      .product-info h3 {
+        font-size: 18px;
+      }
+
+      .product-info p {
+        font-size: 11px;
+      }
+
+      .product-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .order-btn {
+        width: 100%;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 370px;
+        max-width: 330px;
+        margin: auto;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .cta {
+        margin: 0 5% 65px;
+        padding: 55px 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    ✿ LITTLE BLOOMS, BIG FEELINGS — MADE WITH LOVE ✿
+  </div>
+
+  <header>
+    <nav>
+      <a href="#home" class="logo">
+        Bouquet by Nella
+        <span>FLOWERS & LITTLE THINGS</span>
+      </a>
+
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pricelist.html">Price List</a>
+        <a href="index.html#collection">Collection</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="index.html#contact" class="nav-cta">Let's order ♡</a>
+      </div>
+      
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">For your main character moment ✧</div>
+
+        <h1>
+          Say it with<br>
+          <em>flowers.</em>
+        </h1>
+
+        <p>
+          Some feelings are too pretty for words.
+          Let our little bouquets tell your story —
+          from tiny crushes to the biggest celebrations.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-primary">
+            Shop the blooms ↗
+          </a>
+          <a href="#about" class="btn btn-outline">
+            Our little story
+          </a>
+        </div>
+
+        <div class="hero-note">
+          ♡ handmade with love & a little bit of magic
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <img
+          class="hero-photo"
+          src="image/profil.jpeg"
+          alt="Rangkaian bunga cantik untuk hadiah"
+        >
+
+        <div class="sparkle">✳</div>
+
+        <div class="floating-card">
+          A little reminder...
+          <strong>You deserve flowers, too. ♡</strong>
+          Just because, always.
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker">
+      <div class="ticker-track">
+        FLOWERS FOR NO REASON ✿ LITTLE THINGS MATTER ✿
+        MADE WITH LOVE ♡ SEND SOMEONE FLOWERS TODAY ✿
+        FLOWERS FOR NO REASON ✿ LITTLE THINGS MATTER ✿
+        MADE WITH LOVE ♡ SEND SOMEONE FLOWERS TODAY ✿
+      </div>
+    </div>
+
+    <section id="collection">
+      <div class="section-head reveal">
+        <div class="eyebrow">Your next flower obsession</div>
+        <h2>The Flower</h2>
+        <p>
+          Curated with love, wrapped in pretty things.<br>
+          Find the bouquet that feels like your kind of love.
+        </p>
+      </div>
+
+      <div class="filters reveal">
+        <button class="filter-btn active" data-filter="all">All blooms</button>
+        <button class="filter-btn" data-filter="satin">Satin bouquet</button>
+        <button class="filter-btn" data-filter="fresh">Fresh flowers</button>
+        <button class="filter-btn" data-filter="money">Money bouquet</button>
+        <button class="filter-btn" data-filter="artificial">Artificial bouquet</button>
+        <button class="filter-btn" data-filter="trophy">Trophy flower</button>
+        <button class="filter-btn" data-filter="custom">Custom Bouquet</button>
+        <button class="filter-btn" data-filter="pipe">Pipe Cleaner Bouquet</button>
+        <button class="filter-btn" data-filter="fruit">Fruit Bouquet</button>
+
+      </div>
+
+      <div class="product-grid">
+
+        <article class="product reveal" data-category="pipe">
+          <div class="product-image">
+            <img
+              src="image/pipe cleaner.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Pipe Cleaner</h3>
+            <p>Tulip(11) & Lily(2)</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp120.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="pipe">
+          <div class="product-image">
+            <img
+              src="image/sunflowerbigsize.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Sunflower Pipe Cleaner</h3>
+            <p>Sunflower big size(3)</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp225.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="pipe">
+          <div class="product-image">
+            <img
+              src="image/pipe2.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Pipe Cleaner</h3>
+            <p>Tulip(7), Lily(2), Rose(1), Popy(3), Daisy(2)</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp130.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="custom">
+          <div class="product-image">
+            <img
+              src="image/Custom.png"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Custom Bouquet</h3>
+            <p>Skincare, Silverqueen, Snack,...dll</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp-</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="custom">
+          <div class="product-image">
+            <img
+              src="image/custom2.jpg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Skincare Bouquet</h3>
+            <p>Skincare mix artificial flower</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp-</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="artificial">
+          <div class="product-image">
+            <img
+              src="image/thumbelina.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Thumbelina blue</h3>
+            <p>Premium Bouquet</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp85.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="artificial">
+          <div class="product-image">
+            <img
+              src="image/thumbelina2.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Thumbelina</h3>
+            <p>Premium Bouquet</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp85.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="artificial">
+          <div class="product-image">
+            <img
+              src="image/thumbelinabasic.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Thumbelina</h3>
+            <p>Standard Bouquet</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp55.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="artificial">
+          <div class="product-image">
+            <img
+              src="image/rose.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Elegant Rose</h3>
+            <p>For best moment</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp75.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="artificial">
+          <div class="product-image">
+            <img
+              src="image/artificial korean.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Korean Wrapping</h3>
+            <p>Premium</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp100.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="artificial">
+          <div class="product-image">
+            <img
+              src="image/artificialbasic.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Korean Wrapping</h3>
+            <p>Standard</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp100.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="fresh">
+          <div class="product-image">
+            <img
+              src="image/fresh1.jpeg"
+              alt="Buket bunga untuk hadiah"
+              loading="lazy"
+            >
+            <span class="tag">✿ CUSTOMER FAVE</span>
+          </div>
+          <div class="product-info">
+            <h3>Fresh Flower</h3>
+            <p>Basic</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp15.000</span>
+              <button class="order-btn" data-product="Sweet Sunday">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="fresh">
+          <div class="product-image">
+            <img
+              src="image/fresh2.jpeg"
+              alt="Buket bunga untuk hadiah"
+              loading="lazy"
+            >
+            <span class="tag">✿ CUSTOMER FAVE</span>
+          </div>
+          <div class="product-info">
+            <h3>Fresh Flower</h3>
+            <p>Korean wrapping</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp35.000</span>
+              <button class="order-btn" data-product="Sweet Sunday">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="satin">
+          <div class="product-image">
+            <img
+              src="image/satin 1.jpeg"
+              alt="Rangkaian bunga pastel"
+              loading="lazy"
+            >
+            <span class="tag">♡ SOFT GIRL ERA</span>
+          </div>
+          <div class="product-info">
+            <h3>Single Satin</h3>
+            <p>For the girl who deserves the whole garden.</p>
+            <div class="product-bottom">
+              <span class="price">Rp25.000</span>
+              <button class="order-btn" data-product="Blush Affair">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="satin">
+          <div class="product-image">
+            <img
+              src="image/satin 3.jpeg"
+              alt="Bunga cantik untuk momen spesial"
+              loading="lazy"
+            >
+            <span class="tag">✧ LIMITED VIBE</span>
+          </div>
+          <div class="product-info">
+            <h3>Coquette Bloom</h3>
+            <p>Girly, dreamy, and so you-coded.</p>
+            <div class="product-bottom">
+              <span class="price">Rp35.000</span>
+              <button class="order-btn" data-product="Coquette Bloom">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="satin">
+          <div class="product-image">
+            <img
+              src="image/round satin.jpeg"
+              alt="Bunga cantik untuk momen spesial"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER </span>
+          </div>
+          <div class="product-info">
+            <h3>Satin Rose</h3>
+            <p>Round wrapping</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp25.000</span>
+              <button class="order-btn" data-product="Coquette Bloom">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="satin">
+          <div class="product-image">
+            <img
+              src="image/satin.jpeg"
+              alt="Buket bunga bernuansa pink"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Satin Rose</h3>
+            <p>Kombinasi wrapping.</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp25.000</span>
+              <button class="order-btn" data-product="Pink Romance">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="satin">
+          <div class="product-image">
+            <img
+              src="image/satin basic.jpeg"
+              alt="Bunga cantik untuk momen spesial"
+              loading="lazy"
+            >
+            <span class="tag">♡ BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <h3>Satin Rose</h3>
+            <p>Basic wrapping</p>
+            <div class="product-bottom">
+              <span class="price">Rp25.000</span>
+              <button class="order-btn" data-product="Coquette Bloom">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="fruit">
+          <div class="product-image">
+            <img
+              src="image/strawberry standard.jpeg"
+              alt="Inspirasi hadiah bunga"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Strawberry Bouquet</h3>
+            <p>Standard</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp70.000</span>
+              <button class="order-btn" data-product="Fruit">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="fruit">
+          <div class="product-image">
+            <img
+              src="image/strawberry.jpeg"
+              alt="Inspirasi hadiah bunga"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Strawberry Bouquet</h3>
+            <p>Premium</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp150.000</span>
+              <button class="order-btn" data-product="Fruit">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="fruit">
+          <div class="product-image">
+            <img
+              src="image/muscat.jpeg"
+              alt="Inspirasi hadiah bunga"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Muscat Bouquet</h3>
+            <p>Size: Small, Medium, Large</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp70.000</span>
+              <button class="order-btn" data-product="Fruit">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="fruit">
+          <div class="product-image">
+            <img
+              src="image/mix fruit.jpeg"
+              alt="Inspirasi hadiah bunga"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Mix Fruit</h3>
+            <p>Size: Small, Medium, Large</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp100.000</span>
+              <button class="order-btn" data-product="Fruit">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="fruit">
+          <div class="product-image">
+            <img
+              src="image/custom fruit.png"
+              alt="Inspirasi hadiah bunga"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Custom Fruit</h3>
+            <p>Size: Small, Medium, Large</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp-</span>
+              <button class="order-btn" data-product="Fruit">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="money">
+          <div class="product-image">
+            <img
+              src="image/money.jpeg"
+              alt="Inspirasi hadiah bunga"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Money with flower</h3>
+            <p>A little cash, a lot of love. Customizable!</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp50.000</span>
+              <button class="order-btn" data-product="Money Honey">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="money">
+          <div class="product-image">
+            <img
+              src="image/money2.jpg"
+              alt="Inspirasi hadiah bunga"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Money non flower</h3>
+            <p>A little cash, a lot of love. Customizable!</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp40.000</span>
+              <button class="order-btn" data-product="Money Honey">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="trophy">
+          <div class="product-image">
+            <img
+              src="image/trophy.jpeg"
+              alt="Buket bunga romantis"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Trophy Flower</h3>
+            <p>Gold</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp125.000</span>
+              <button class="order-btn" data-product="Love Letter">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-category="trophy">
+          <div class="product-image">
+            <img
+              src="image/trophy pink.jpeg"
+              alt="Buket bunga romantis"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-info">
+            <h3>Trophy Flower</h3>
+            <p>Gold x pink</p>
+            <div class="product-bottom">
+              <span class="price">Start Rp125.000</span>
+              <button class="order-btn" data-product="Love Letter">
+                Order ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner">
+        <img
+          class="about-image reveal"
+          src="image/profil.jpeg"
+          alt="Bunga yang dirangkai dengan penuh cinta"
+          loading="lazy"
+        >
+
+        <div class="about-copy reveal">
+          <div class="eyebrow">A little love behind every bloom</div>
+
+          <h2>Not just flowers,<br><em>it's a feeling.</em></h2>
+
+          <p>
+            Hi, Nellers! Welcome to Bouquet by Nella.
+            Kami percaya bahwa hadiah tidak harus mahal untuk
+            menjadi berarti. Terkadang, satu buket kecil bisa
+            menyampaikan perasaan yang sulit diungkapkan.
+          </p>
+
+          <p>
+            Setiap buket dirancang dengan perhatian terhadap
+            detail, perpaduan warna yang manis, dan sentuhan
+            personal untuk membuat momenmu lebih berkesan.
+          </p>
+
+          <div class="perks">
+            <div class="perk">
+              <strong>♡ Handmade</strong>
+              <span>Dirangkai dengan cinta</span>
+            </div>
+            <div class="perk">
+              <strong>✿ Customizable</strong>
+              <span>Warna sesuai keinginan</span>
+            </div>
+            <div class="perk">
+              <strong>୨୧ Gift-ready</strong>
+              <span>Packaging cantik</span>
+            </div>
+            <div class="perk">
+              <strong>✧ Personal</strong>
+              <span>Bisa tambah kartu ucapan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-order">
+      <div class="section-head reveal">
+        <div class="eyebrow">Easy peasy, flower bestie!</div>
+        <h2>How to order?</h2>
+        <p>Three little steps to make someone's day. ♡</p>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-icon">✿</div>
+          <h3>01. Pick your bloom</h3>
+          <p>Pilih buket favoritmu atau konsultasikan desain custom.</p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-icon">♡</div>
+          <h3>02. Let's chat!</h3>
+          <p>Hubungi kami melalui WhatsApp untuk konfirmasi pesanan.</p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-icon">🎀</div>
+          <h3>03. Send the love</h3>
+          <p>Konfirmasi pembayaran dan pengiriman bersama admin.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta" id="contact">
+      <div class="eyebrow" style="color:#f5cbd9">
+        YOUR SIGN TO SEND FLOWERS
+      </div>
+      <h2>Someone deserves<br>flowers today. ♡</h2>
+      <p>
+        Your bestie, your lover, your mom — or yourself.
+        Make their day a little more beautiful.
+      </p>
+      <a
+        class="btn"
+        href="https://wa.me/6285773356402?text=Halo%20Bouquet%20by%20Nella%2C%20aku%20mau%20pesan%20buket!"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Let's make someone smile ↗
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          Bouquet by Nella
+          <span>FLOWERS & LITTLE THINGS</span>
+        </a>
+        <p>
+          Little blooms, big feelings. Made with love
+          for every person and every story worth celebrating.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>EXPLORE</h4>
+        <a href="#home">Home</a>
+        <a href="#collection">Our Collection</a>
+        <a href="#about">Our Story</a>
+        <a href="#how-to-order">How to Order</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>LET'S CONNECT</h4>
+        <a href="https://wa.me/6285773356402"
+           target="_blank" rel="noopener noreferrer">
+          WhatsApp: 085773356402
+        </a>
+        <a href="https://instagram.com/bouquetbynella"
+           target="_blank" rel="noopener noreferrer">
+          Instagram @bouquetbynella
+        </a>
+        <a href="https://tiktok.com/@bouquetbynella"
+           target="_blank" rel="noopener noreferrer">
+          TikTok @bouquetbynella
+        </a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> Bouquet by Nella.
+      Made with ♡ and a little flower magic.
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/6285773356402"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat dengan Bouquet by Nella melalui WhatsApp"
+  >
+    ♡ Chat with us
+  </a>
+
+  <script>
+    // Update copyright year automatically
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Product category filters
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const products = document.querySelectorAll(".product");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(item =>
+          item.classList.remove("active")
+        );
+
+        button.classList.add("active");
+        const category = button.dataset.filter;
+
+        products.forEach(product => {
+          const match =
+            category === "all" ||
+            product.dataset.category === category;
+
+          product.classList.toggle("hidden", !match);
+        });
+      });
+    });
+
+    // WhatsApp order messages for each product
+    const phoneNumber = "6285773356402";
+
+    document.querySelectorAll(".order-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const productName = button.dataset.product;
+
+        const message =
+          `Halo Bouquet by Nella! 🌷\n\n` +
+          `Aku tertarik memesan buket *${productName}*.\n` +
+          `Boleh minta informasi detail dan cara pemesanannya? ♡`;
+
+        const url =
+          `https://wa.me/${phoneNumber}?text=` +
+          encodeURIComponent(message);
+
+        window.open(url, "_blank", "noopener,noreferrer");
+      });
+    });
+
+    // Reveal elements on scroll
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach(element => observer.observe(element));
+    } else {
+      revealElements.forEach(element =>
+        element.classList.add("visible")
+      );
+    }
+  </script>
+
+</body>
+</html>

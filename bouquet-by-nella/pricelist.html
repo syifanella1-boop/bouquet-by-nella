@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff7f5">
+<title>Price List — Bouquet by Nella</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #f5dce2;
+  --pink-dark: #a65e78;
+  --pink-deep: #803d58;
+  --cream: #fffaf7;
+  --text: #543b43;
+  --muted: #9b7d84;
+  --border: #efdee1;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.announcement {
+  background: var(--pink-deep);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fffaf7ed;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 17px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font: 500 23px "Playfair Display", serif;
+  color: var(--pink-deep);
+  white-space: nowrap;
+}
+
+.logo span {
+  display: block;
+  text-align: center;
+  font: 9px "DM Sans", sans-serif;
+  letter-spacing: 3px;
+  margin-top: 3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  font-size: 12px;
+}
+
+.nav-links a:hover { color: var(--pink-dark); }
+
+.nav-cta {
+  background: var(--pink-dark);
+  color: white !important;
+  padding: 11px 17px;
+  border-radius: 30px;
+}
+
+.hero {
+  text-align: center;
+  padding: 68px 20px 52px;
+  background:
+    radial-gradient(ellipse at top, #f8e5e8 0%, transparent 68%);
+}
+
+.eyebrow {
+  color: var(--pink-dark);
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font: 500 clamp(43px, 7vw, 72px)/1.15 "Playfair Display", serif;
+  margin: 18px 0 12px;
+  color: var(--pink-deep);
+}
+
+.hero h1 em {
+  color: var(--pink-dark);
+  font-weight: 500;
+}
+
+.hero p {
+  max-width: 540px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.hero-note {
+  display: inline-block;
+  margin-top: 23px;
+  padding: 10px 18px;
+  border: 1px solid #e9cbd4;
+  border-radius: 30px;
+  color: var(--pink-deep);
+  font-size: 11px;
+}
+
+.category-nav {
+  position: sticky;
+  top: 75px;
+  z-index: 50;
+  background: #fffaf7f5;
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 13px 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.category-nav a {
+  border: 1px solid #ead5da;
+  border-radius: 30px;
+  padding: 9px 15px;
+  font-size: 11px;
+  white-space: nowrap;
+  transition: .2s;
+}
+
+.category-nav a:hover {
+  background: var(--pink-dark);
+  color: white;
+  border-color: var(--pink-dark);
+}
+
+main {
+  max-width: 1120px;
+  margin: auto;
+  padding: 45px 24px 80px;
+}
+
+.price-section {
+  margin-bottom: 55px;
+  scroll-margin-top: 145px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 23px;
+}
+
+.section-heading h2 {
+  font: 500 clamp(27px, 4vw, 38px) "Playfair Display", serif;
+  color: var(--pink-deep);
+  margin-top: 7px;
+}
+
+.section-heading p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+.section-number {
+  font: italic 25px "Playfair Display", serif;
+  color: #d9a8b8;
+}
+
+.price-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 24px #80506308;
+}
+
+.card-heading {
+  background: #faedf0;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card-heading h3 {
+  font: 500 23px "Playfair Display", serif;
+  color: var(--pink-deep);
+}
+
+.card-heading span {
+  font-size: 10px;
+  color: var(--pink-dark);
+  letter-spacing: 1px;
+}
+
+.card-body { padding: 20px 22px; }
+
+.color-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.swatch {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #0000001c;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.swatch.white { background: #fff; border-color: #d9c7cc; }
+.swatch.black { background: #222126; }
+.swatch.navy { background: #202e50; }
+.swatch.maroon { background: #741d38; }
+.swatch.blue { background: #75aee0; }
+.swatch.pink { background: #f2a9c2; }
+.swatch.yellow { background: #f5d76e; }
+.swatch.purple { background: #a88acb; }
+.swatch.red { background: #d8495a; }
+.swatch.green { background: #799c7a; }
+.swatch.cream { background: #eadcc4; }
+.swatch.brown { background: #987052; }
+
+.color-note {
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: -9px;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: left;
+}
+
+thead { background: #fff7f5; }
+
+th {
+  color: var(--pink-deep);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+th, td {
+  padding: 13px 15px;
+  border-bottom: 1px solid #f3e9e9;
+  white-space: nowrap;
+}
+
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: #fffafa; }
+
+td:last-child {
+  color: var(--pink-deep);
+  font-weight: 700;
+}
+
+.variant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.variant-grid .price-card { margin-bottom: 0; }
+
+.variant-label {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #e8cbd4;
+  padding: 6px 11px;
+  border-radius: 30px;
+  color: var(--pink-deep);
+  font-size: 10px;
+  margin-bottom: 14px;
+}
+
+.mini-title {
+  font: 500 20px "Playfair Display", serif;
+  color: var(--pink-deep);
+  margin: 10px 0 14px;
+}
+
+.subtable { margin-bottom: 20px; }
+.subtable:last-child { margin-bottom: 0; }
+
+.admin-note {
+  padding: 15px 17px;
+  background: #fff6e9;
+  border-radius: 9px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #896b4d;
+  margin-top: 15px;
+}
+
+.order-area {
+  text-align: center;
+  background: #f8e9e9;
+  padding: 55px 20px;
+  border-radius: 18px;
+  margin-top: 15px;
+}
+
+.order-area h2 {
+  font: 500 clamp(30px, 5vw, 45px) "Playfair Display", serif;
+  color: var(--pink-deep);
+  margin: 12px 0;
+}
+
+.order-area p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.order-btn {
+  display: inline-block;
+  border: 0;
+  background: var(--pink-dark);
+  color: white;
+  border-radius: 30px;
+  padding: 14px 23px;
+  font-size: 12px;
+  transition: .2s;
+}
+
+.order-btn:hover { transform: translateY(-3px); }
+
+footer {
+  background: #f7e8e8;
+  text-align: center;
+  padding: 35px 20px 20px;
+}
+
+footer .logo { display: inline-block; }
+
+footer p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+  margin: 15px auto;
+}
+
+footer .copyright {
+  border-top: 1px solid #e7d2d7;
+  padding-top: 17px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.wa-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  background: #287c56;
+  color: white;
+  border-radius: 50px;
+  padding: 14px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 6px 22px #0002;
+}
+
+@media(max-width: 700px) {
+  nav { flex-wrap: wrap; padding: 14px 5%; }
+  .logo { font-size: 20px; }
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    order: 2;
+  }
+  .nav-links a { font-size: 10px; }
+  .nav-cta { padding: 9px 11px; }
+  .category-nav {
+    top: 99px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .hero { padding: 50px 18px 38px; }
+  main { padding: 35px 15px 55px; }
+  .variant-grid { grid-template-columns: 1fr; }
+  .card-heading { padding: 16px; }
+  .card-body { padding: 16px; }
+  th, td { padding: 12px; }
+  .section-heading h2 { font-size: 30px; }
+  .price-section { scroll-margin-top: 160px; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  ✿ LITTLE BLOOMS, BIG FEELINGS — MADE WITH LOVE ✿
+</div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      Bouquet by Nella
+      <span>FLOWERS & LITTLE THINGS</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pricelist.html">Price List</a>
+      <a href="index.html#collection">Collection</a>
+      <a href="index.html#about">Our Story</a>
+      <a class="nav-cta" href="#order">Let's order ♡</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">A little something for someone special</div>
+  <h1>the flower <em>price list.</em></h1>
+  <p>
+    Find your favorite blooms, choose your style,
+    and let us wrap your feelings into something beautiful. ♡
+  </p>
+  <div class="hero-note">✿ Custom bouquet · Made with love · Pretty packaging</div>
+</div>
+
+<div class="category-nav">
+  <a href="#satin">Satin</a>
+  <a href="#artificial">Artificial</a>
+  <a href="#money">Money Bouquet</a>
+  <a href="#fruit">Fruit Bouquet</a>
+  <a href="#trophy">Trophy</a>
+  <a href="#fresh">Fresh Flower</a>
+  <a href="#pipe">Pipe Cleaner</a>
+
+</div>
+
+<main>
+
+<!-- 01. BOUQUET SATIN -->
+<section class="price-section" id="satin">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">01 — Soft & timeless</div>
+      <h2>Bouquet Satin</h2>
+      <p>Dua model pilihan dengan berbagai warna cantik. ♡</p>
+    </div>
+    <div class="section-number">01 / 06</div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Bouquet Satin — Basic</h3>
+      <span>SIMPLE & ELEGANT</span>
+    </div>
+    <div class="card-body">
+      <div class="color-title">Pilihan warna</div>
+      <div class="swatches">
+        <span class="swatch black" role="img" aria-label="Black"></span>
+        <span class="swatch navy" role="img" aria-label="Navy"></span>
+        <span class="swatch maroon" role="img" aria-label="Maroon"></span>
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch green" role="img" aria-label="Green"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+        <span class="swatch brown" role="img" aria-label="Brown"></span>
+      </div>
+      <p class="color-note">Pilihan warna mengikuti ketersediaan stok.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Jumlah tangkai</th><th>Harga</th></tr></thead>
+          <tbody>
+            <tr><td>1 tangkai</td><td>Rp20.000</td></tr>
+            <tr><td>3 tangkai</td><td>Rp35.000</td></tr>
+            <tr><td>5 tangkai</td><td>Rp55.000</td></tr>
+            <tr><td>7 tangkai</td><td>Rp70.000</td></tr>
+            <tr><td>10 tangkai</td><td>Rp85.000</td></tr>
+            <tr><td>15 tangkai</td><td>Rp100.000</td></tr>
+            <tr><td>20 tangkai</td><td>Rp150.000</td></tr>
+            <tr><td>25 tangkai</td><td>Rp185.000</td></tr>
+            <tr><td>30 tangkai</td><td>Rp200.000</td></tr>
+            <tr><td>40 tangkai</td><td>Rp275.000</td></tr>
+            <tr><td>50 tangkai</td><td>Rp300.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Bouquet Satin — Gembul</h3>
+      <span>FULL & VOLUMINOUS</span>
+    </div>
+    <div class="card-body">
+      <div class="color-title">Pilihan warna</div>
+      <div class="swatches">
+        <span class="swatch black" role="img" aria-label="Black"></span>
+        <span class="swatch navy" role="img" aria-label="Navy"></span>
+        <span class="swatch maroon" role="img" aria-label="Maroon"></span>
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch green" role="img" aria-label="Green"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+        <span class="swatch brown" role="img" aria-label="Brown"></span>
+      </div>
+      <p class="color-note">Pilihan warna mengikuti ketersediaan stok.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Jumlah tangkai</th><th>Harga</th></tr></thead>
+          <tbody>
+            <tr><td>1 tangkai</td><td>Rp25.000</td></tr>
+            <tr><td>3 tangkai</td><td>Rp45.000</td></tr>
+            <tr><td>5 tangkai</td><td>Rp70.000</td></tr>
+            <tr><td>7 tangkai</td><td>Rp85.000</td></tr>
+            <tr><td>10 tangkai</td><td>Rp145.000</td></tr>
+            <tr><td>15 tangkai</td><td>Rp175.000</td></tr>
+            <tr><td>20 tangkai</td><td>Rp195.000</td></tr>
+            <tr><td>25 tangkai</td><td>Rp200.000</td></tr>
+            <tr><td>30 tangkai</td><td>Rp260.000</td></tr>
+            <tr><td>40 tangkai</td><td>Rp380.000</td></tr>
+            <tr><td>50 tangkai</td><td>Rp450.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02. ARTIFICIAL BOUQUET -->
+<section class="price-section" id="artificial">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">02 — Always in bloom</div>
+      <h2>Artificial Bouquet</h2>
+      <p>Buket bunga artificial dengan pilihan model dan warna. ♡</p>
+    </div>
+    <div class="section-number">02 / 06</div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Thumbelina</h3>
+      <span>STANDARD & PREMIUM</span>
+    </div>
+    <div class="card-body">
+      <div class="color-title">Pilihan warna</div>
+      <div class="swatches">
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch black" role="img" aria-label="Black"></span>
+        <span class="swatch navy" role="img" aria-label="Navy"></span>
+        <span class="swatch maroon" role="img" aria-label="Maroon"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch green" role="img" aria-label="Green"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+        <span class="swatch brown" role="img" aria-label="Brown"></span>
+      </div>
+      <p class="color-note">Pilihan warna mengikuti ketersediaan stok.</p>
+
+      <div class="variant-grid">
+        <div>
+          <span class="variant-label">STANDARD</span>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+              <tbody>
+                <tr><td>Size S</td><td>Rp55.000</td></tr>
+                <tr><td>Size M</td><td>Rp85.000</td></tr>
+                <tr><td>Size L</td><td>Rp100.000</td></tr>
+                <tr><td>Size XL</td><td>Rp165.000</td></tr>
+                <tr><td>Size XXL</td><td>Rp250.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <span class="variant-label">PREMIUM</span>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+              <tbody>
+                <tr><td>Size S</td><td>Rp85.000</td></tr>
+                <tr><td>Size M</td><td>Rp190.000</td></tr>
+                <tr><td>Size L</td><td>Rp275.000</td></tr>
+                <tr><td>Size XL</td><td>Rp450.000</td></tr>
+                <tr><td>Size XXL</td><td>Rp500.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Korean Wrapping</h3>
+      <span>STANDARD & PREMIUM</span>
+    </div>
+    <div class="card-body">
+      <div class="color-title">Pilihan warna</div>
+      <div class="swatches">
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch black" role="img" aria-label="Black"></span>
+        <span class="swatch navy" role="img" aria-label="Navy"></span>
+        <span class="swatch maroon" role="img" aria-label="Maroon"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch green" role="img" aria-label="Green"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+        <span class="swatch brown" role="img" aria-label="Brown"></span>
+      </div>
+      <p class="color-note">Pilihan warna mengikuti ketersediaan stok.</p>
+
+      <div class="variant-grid">
+        <div>
+          <span class="variant-label">STANDARD</span>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+              <tbody>
+                <tr><td>Size S</td><td>Rp95.000</td></tr>
+                <tr><td>Size M</td><td>Rp165.000</td></tr>
+                <tr><td>Size L</td><td>Rp190.000</td></tr>
+                <tr><td>Size XL</td><td>Rp255.000</td></tr>
+                <tr><td>Size XXL</td><td>Rp300.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <span class="variant-label">PREMIUM</span>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+              <tbody>
+                <tr><td>Size S</td><td>Rp100.000</td></tr>
+                <tr><td>Size M</td><td>Rp170.000</td></tr>
+                <tr><td>Size L</td><td>Rp255.000</td></tr>
+                <tr><td>Size XL</td><td>Rp350.000</td></tr>
+                <tr><td>Size XXL</td><td>Rp500.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Mawar + Edelweis</h3>
+      <span>ARTIFICIAL FLOWER MIX</span>
+    </div>
+    <div class="card-body">
+      <div class="color-title">Pilihan warna wrapping</div>
+      <div class="swatches">
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch black" role="img" aria-label="Black"></span>
+        <span class="swatch navy" role="img" aria-label="Navy"></span>
+        <span class="swatch maroon" role="img" aria-label="Maroon"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch green" role="img" aria-label="Green"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+        <span class="swatch brown" role="img" aria-label="Brown"></span>
+      </div>
+      <p class="color-note">Pilihan warna mengikuti ketersediaan stok.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+          <tbody>
+            <tr><td>Size S</td><td>Rp75.000</td></tr>
+            <tr><td>Size M</td><td>Rp160.000</td></tr>
+            <tr><td>Size L</td><td>Rp200.000</td></tr>
+            <tr><td>Size XL</td><td>Rp300.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03. MONEY BOUQUET -->
+<section class="price-section" id="money">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">03 — A gift with meaning</div>
+      <h2>Money Bouquet</h2>
+      <p>Pilihan buket uang dengan atau tanpa tambahan bunga. ♡</p>
+    </div>
+    <div class="section-number">03 / 06</div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Money Bouquet</h3>
+      <span>WITH OR WITHOUT FLOWERS</span>
+    </div>
+    <div class="card-body">
+      <div class="color-title">Pilihan warna wrapping</div>
+      <div class="swatches">
+        <span class="swatch black" role="img" aria-label="Black"></span>
+        <span class="swatch navy" role="img" aria-label="Navy"></span>
+        <span class="swatch maroon" role="img" aria-label="Maroon"></span>
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch green" role="img" aria-label="Green"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+        <span class="swatch brown" role="img" aria-label="Brown"></span>
+      </div>
+      <p class="color-note">Pilihan warna mengikuti ketersediaan stok.</p>
+
+      <div class="variant-grid">
+        <div>
+          <span class="variant-label">TANPA BUNGA</span>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Jumlah tangkai</th><th>Harga</th></tr></thead>
+              <tbody>
+                <tr><td>5–10 tangkai</td><td>Rp40.000</td></tr>
+                <tr><td>11–15 tangkai</td><td>Rp50.000</td></tr>
+                <tr><td>16–20 tangkai</td><td>Rp60.000</td></tr>
+                <tr><td>21–25 tangkai</td><td>Rp70.000</td></tr>
+                <tr><td>26–30 tangkai</td><td>Rp80.000</td></tr>
+                <tr><td>31–35 tangkai</td><td>Rp90.000</td></tr>
+                <tr><td>36–40 tangkai</td><td>Rp100.000</td></tr>
+                <tr><td>41–45 tangkai</td><td>Rp110.000</td></tr>
+                <tr><td>46–50 tangkai</td><td>Rp120.000</td></tr>
+                <tr><td>Di atas 50 tangkai</td><td>Hubungi admin</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <span class="variant-label">DENGAN BUNGA</span>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Jumlah tangkai</th><th>Harga</th></tr></thead>
+              <tbody>
+                <tr><td>5–10 tangkai</td><td>Rp50.000</td></tr>
+                <tr><td>11–15 tangkai</td><td>Rp60.000</td></tr>
+                <tr><td>16–20 tangkai</td><td>Rp70.000</td></tr>
+                <tr><td>21–25 tangkai</td><td>Rp80.000</td></tr>
+                <tr><td>26–30 tangkai</td><td>Rp90.000</td></tr>
+                <tr><td>31–35 tangkai</td><td>Rp100.000</td></tr>
+                <tr><td>36–40 tangkai</td><td>Rp110.000</td></tr>
+                <tr><td>41–45 tangkai</td><td>Rp120.000</td></tr>
+                <tr><td>46–50 tangkai</td><td>Rp130.000</td></tr>
+                <tr><td>Di atas 50 tangkai</td><td>Hubungi admin</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-note">
+        ✿ Pesanan di atas 50 tangkai? Hubungi admin untuk informasi harga.
+        Harga di atas merupakan biaya rangkaian; nominal uang yang dimasukkan
+        ke dalam buket dikonfirmasi secara terpisah.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04. FRUIT BOUQUET -->
+<section class="price-section" id="fruit">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">04 — A fresh kind of love</div>
+      <h2>Fruit Bouquet</h2>
+      <p>A fruity surprise for someone special. ♡</p>
+    </div>
+    <div class="section-number">04 / 06</div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading"><h3>Strawberry Bouquet</h3><span>STANDARD & PREMIUM</span></div>
+    <div class="card-body">
+      <div class="variant-grid">
+        <div>
+          <span class="variant-label">STANDARD</span>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+            <tbody>
+              <tr><td>Small</td><td>Rp70.000</td></tr>
+              <tr><td>Medium</td><td>Rp145.000</td></tr>
+              <tr><td>Large</td><td>Rp200.000</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+
+        <div>
+          <span class="variant-label">PREMIUM · IMPORT</span>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+            <tbody>
+              <tr><td>Small</td><td>Rp150.000</td></tr>
+              <tr><td>Medium</td><td>Rp250.000</td></tr>
+              <tr><td>Large</td><td>Rp350.000</td></tr>
+            </tbody>
+          </table></div>
+          <div class="admin-note">Premium menggunakan strawberry impor.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading"><h3>Muscat Bouquet</h3><span>FRESH & SWEET</span></div>
+    <div class="card-body">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+          <tbody>
+            <tr><td>Small</td><td>Rp70.000</td></tr>
+            <tr><td>Medium</td><td>Rp150.000</td></tr>
+            <tr><td>Large</td><td>Rp220.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading"><h3>Mix Bouquet</h3><span>FRUITY MIX</span></div>
+    <div class="card-body">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+          <tbody>
+            <tr><td>Small</td><td>Rp100.000</td></tr>
+            <tr><td>Medium</td><td>Rp175.000</td></tr>
+            <tr><td>Large</td><td>Rp275.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05. TROPHY BOUQUET -->
+<section class="price-section" id="trophy">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">05 — Celebrate their win</div>
+      <h2>Trophy Bouquet</h2>
+      <p>A little trophy for someone who deserves to shine.</p>
+    </div>
+    <div class="section-number">05 / 06</div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Trophy Bouquet</h3>
+      <span>GOLD OR SILVER</span>
+    </div>
+    <div class="card-body">
+      <div class="color-title">Pilihan warna trophy</div>
+      <div class="swatches">
+        <span class="swatch" style="background:linear-gradient(135deg,#f8e8a4,#c69a32)" role="img" aria-label="Gold"></span>
+        <span class="swatch" style="background:linear-gradient(135deg,#fff,#9fa4af)" role="img" aria-label="Silver"></span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+          <tbody>
+            <tr><td>Size S</td><td>Rp125.000</td></tr>
+            <tr><td>Size M</td><td>Rp150.000</td></tr>
+            <tr><td>Size L</td><td>Rp200.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06. FRESH FLOWER -->
+<section class="price-section" id="fresh">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">06 — Naturally beautiful</div>
+      <h2>Fresh Flower</h2>
+      <p>Real flowers, fresh feelings, beautiful memories.</p>
+    </div>
+    <div class="section-number">06 / 06</div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Fresh Flower Bouquet</h3>
+      <span>FRESHLY ARRANGED</span>
+    </div>
+    
+    <div class="card-body">
+      <div class="color-title">Inspirasi warna</div>
+      <div class="swatches">
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+      </div>
+      <p class="color-note">Warna dan jenis bunga menyesuaikan ketersediaan stok.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ukuran</th><th>Harga</th></tr></thead>
+          <tbody>
+            <tr><td>Size S</td><td>Rp35.000</td></tr>
+            <tr><td>Size M</td><td>Rp65.000</td></tr>
+            <tr><td>Size L</td><td>Rp100.000</td></tr>
+            <tr><td>Size XL</td><td>Rp155.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 07. PIPE CLEANER -->
+<section class="price-section" id="pipe">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">07 — Handmade with love</div>
+      <h2>Pipe Cleaner Bouquet</h2>
+      <p>Handmade flowers, crafted with love for your special ones. ♡</p>
+    </div>
+    <div class="section-number">07 / 07</div>
+  </div>
+
+  <div class="price-card">
+    <div class="card-heading">
+      <h3>Pipe Cleaner</h3>
+      <span>HANDMADE FLOWERS</span>
+    </div>
+
+    <div class="card-body">
+      <div class="color-title">Pilihan warna wrapping</div>
+      <div class="swatches">
+        <span class="swatch black" role="img" aria-label="Black"></span>
+        <span class="swatch navy" role="img" aria-label="Navy"></span>
+        <span class="swatch maroon" role="img" aria-label="Maroon"></span>
+        <span class="swatch white" role="img" aria-label="White"></span>
+        <span class="swatch blue" role="img" aria-label="Blue"></span>
+        <span class="swatch pink" role="img" aria-label="Pink"></span>
+        <span class="swatch yellow" role="img" aria-label="Yellow"></span>
+        <span class="swatch purple" role="img" aria-label="Purple"></span>
+        <span class="swatch red" role="img" aria-label="Red"></span>
+        <span class="swatch green" role="img" aria-label="Green"></span>
+        <span class="swatch cream" role="img" aria-label="Cream"></span>
+        <span class="swatch brown" role="img" aria-label="Brown"></span>
+      </div>
+      <p class="color-note">Pilihan warna mengikuti ketersediaan stok.</p>
+
+    <div class="card-body">
+      <span class="variant-label">PRICE PER STEM</span>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Nama Bunga</th>
+              <th>Harga / Tangkai</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Tulip Kuncup</td>
+              <td>Rp8.000</td>
+            </tr>
+            <tr>
+              <td>Tulip Mekar</td>
+              <td>Rp10.000</td>
+            </tr>
+            <tr>
+              <td>Mawar / Rose</td>
+              <td>Rp12.000</td>
+            </tr>
+            <tr>
+              <td>Daisy / Aster</td>
+              <td>Rp7.000</td>
+            </tr>
+            <tr>
+              <td>Mini Daisy</td>
+              <td>Rp6.000</td>
+            </tr>
+            <tr>
+              <td>Lavender</td>
+              <td>Rp6.000</td>
+            </tr>
+            <tr>
+              <td>Lily</td>
+              <td>Rp10.000</td>
+            </tr>
+            <tr>
+              <td>Tiger Lily</td>
+              <td>Rp13.000</td>
+            </tr>
+            <tr>
+              <td>Baby's Breath</td>
+              <td>Rp5.000</td>
+            </tr>
+            <tr>
+              <td>Sunflower Reguler</td>
+              <td>Rp15.000</td>
+            </tr>
+            <tr>
+              <td>Sunflower BIG SIZE</td>
+              <td>Rp25.000</td>
+            </tr>
+            <tr>
+              <td>Lily of The Valley</td>
+              <td>Rp8.000</td>
+            </tr>
+            <tr>
+              <td>Gerbera / Garbiera</td>
+              <td>Rp12.000</td>
+            </tr>
+            <tr>
+              <td>Poppy / Popy</td>
+              <td>Rp10.000</td>
+            </tr>
+            <tr>
+              <td>Anggrek / Orchid</td>
+              <td>Rp18.000</td>
+            </tr>
+            <tr>
+              <td>Buttercup</td>
+              <td>Rp7.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="admin-note">
+        ✿ Harga yang tertera merupakan harga per tangkai.
+        Untuk pemesanan buket custom atau kombinasi beberapa jenis
+        bunga, silakan hubungi admin Bouquet by Nella.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="order-area" id="order">
+  <div class="eyebrow">Your flower era starts here</div>
+  <h2>Found your favorite? ♡</h2>
+  <p>
+    Punya pertanyaan, ingin custom buket, atau ingin
+    memastikan ketersediaan warna? Yuk, chat admin!
+  </p>
+  <a class="order-btn"
+     href="https://wa.me/6285773356402?text=Halo%20Bouquet%20by%20Nella%2C%20aku%20mau%20tanya%20price%20list%20buket."
+     target="_blank" rel="noopener noreferrer">
+    Chat admin on WhatsApp ↗
+  </a>
+</div>
+
+</main>
+
+<footer>
+  <a href="index.html" class="logo">
+    Bouquet by Nella
+    <span>FLOWERS & LITTLE THINGS</span>
+  </a>
+
+  <p>Little blooms, big feelings. Made with love. ✿</p>
+
+  <p>
+    <a href="https://instagram.com/bouquetbynella"
+       target="_blank" rel="noopener noreferrer">Instagram</a>
+    &nbsp; · &nbsp;
+    <a href="https://tiktok.com/@bouquetbynella"
+       target="_blank" rel="noopener noreferrer">TikTok</a>
+    &nbsp; · &nbsp;
+    <a href="https://wa.me/6285773356402"
+       target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </p>
+
+  <div class="copyright">
+    © <span id="year"></span> Bouquet by Nella. Made with ♡
+  </div>
+</footer>
+
+<a class="wa-float"
+   href="https://wa.me/6285773356402"
+   target="_blank" rel="noopener noreferrer">
+  ♡ Chat with us
+</a>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
